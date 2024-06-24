@@ -1,0 +1,71 @@
+.site__review {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  &-container {
+    @include for-tablet() {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include for-tablet() {
+      flex: 1;
+    }
+    &-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    &-label {
+      border: 2px solid rgba(4, 255, 120, 0.8);
+      padding: 0.25rem 1.5rem;
+      border-radius: 3rem;
+      font-size: 1.2rem;
+    }
+    &-title {
+      font-size: $review-title;
+      @include for-tablet() {
+        font-size: 4rem;
+      }
+      @include for-desktop() {
+        font-size: 5rem;
+      }
+      @include for-desktop-lg() {
+        font-size: 6.4rem;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    &-description {
+      &-accent {
+        color: $primary-color-900;
+      }
+    }
+    &-benifits {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  &-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

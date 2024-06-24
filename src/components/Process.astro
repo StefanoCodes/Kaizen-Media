@@ -1,0 +1,39 @@
+---
+import Section from "./Section.astro";
+import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
+const processes = await getCollection('process');
+
+
+---
+
+
+<Section sectionTitle="Our Working Process" sectionID="process" subHeadline="How We Work">
+  <div class="process__container">
+    <div class="process__content">
+      {processes.map((process, idx) => {
+        return (
+          <ul class="process__content-step">
+            <li>
+              <h3 class="process__content-step-title">0{idx + 1}- {process.data.title}</h3>
+              <p class="process__content-step-description">{process.data.description}</p>
+            </li>
+           
+          </ul>
+          
+        )
+      })}
+    </div>
+
+    <div class="process__illustration"> 
+      <swiper-container autoplay class="swiper">
+    {processes.map((process) => {
+      return (      <swiper-slide >
+                      <Image src={process.data.img} alt={process.data.title}/>
+                  </swiper-slide>)
+    })}
+      </swiper-container>
+   </div>
+  </div>
+    
+ </Section> 

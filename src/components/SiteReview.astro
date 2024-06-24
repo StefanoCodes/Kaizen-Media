@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+import Form from "./Form.astro";
+---
+
+<div class="site__review">
+  <a href="/" class="site__review-back">
+    <Icon id="back" size={32} name={"arrow_left"}/>
+    <label class="site__review-back-label" for="back">Back<label>
+  </a>
+  <div class="site__review-container">
+    <div class="site__review-content">
+      <div class="site__review-content-heading">
+        <span class="site__review-content-label">
+          Free
+        </span>
+        <h1 class="site__review-content-title">Request a free website review</h1>
+      </div>
+   
+      <div class="site__review-content-text">
+        <p class="site__review-content-description">
+          Honest website and marketing reviews, recorded by <span class="site__review-content-description-accent">real marketing experts, </span>not bots.
+        </p>
+        <p class="site__review-content-description">
+          We’ll research your existing marketing, then wrap all our insight into a 
+    <span class="site__review-content-description-accent">15-minute video</span>, which we’ll send you completely free of charge within three to five working days.
+        </p>
+      </div>
+      <ul class="site__review-content-benifits">
+        <li>
+          ✅ Enhanced Conversion Rates
+        </li>
+        <li>
+          ✅ Competitive Analysis
+        </li>
+        <li>
+          ✅ Cost Effective
+        </li>
+      </ul>
+    </div>
+    <Form/>
+  </div>
+  
+</div>

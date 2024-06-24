@@ -1,0 +1,15 @@
+@mixin for-tablet {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: 62.5em) {
+    @content;
+  }
+}
+@mixin for-desktop-lg {
+  @media (min-width: 81.25em) {
+    @content;
+  }
+}

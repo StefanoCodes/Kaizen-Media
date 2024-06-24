@@ -1,0 +1,102 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #232426;
+  border-radius: 1.4rem;
+  padding: 1.5rem 1rem;
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  &__menu.menu-open .hamburger-menu-dash:nth-child(1) {
+    background: white;
+    transform: rotateZ(45deg);
+    top: 8px;
+  }
+  &__menu.menu-open .hamburger-menu-dash:nth-child(2) {
+    background: white;
+    width: 0;
+    transform: translateX(-50px);
+  }
+  &__menu.menu-open .hamburger-menu-dash:nth-child(3) {
+    background: white;
+    transform: rotateZ(-45deg);
+    top: -8px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+    background: #000;
+    @include for-tablet() {
+      transform: translate(0);
+      background: none;
+      opacity: 1;
+      position: static;
+      flex-direction: row;
+      gap: 2rem;
+    }
+    &-item a {
+      width: 100%;
+      display: block;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "satoshi";
+      padding: 0.5rem 2rem;
+      border: 2px solid transparent;
+      transition: border 0.3s ease-in-out;
+      @include for-tablet() {
+        text-transform: capitalize;
+        padding: 0;
+        color: #fff;
+      }
+      &:hover {
+        border-bottom: 2px solid $primary-color-900;
+      }
+    }
+  }
+
+  .hamburger-menu-dash {
+    position: relative;
+    display: block;
+    height: 0.4rem;
+    background-color: #fff;
+    width: 3.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .hamburger-menu-dash:nth-child(2) {
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__menu {
+    @include for-tablet() {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// brand Colors
+$primary-color-900: #ff6584;
+$primary-color-800: #f48484;
+$gradient-dark-to-light: linear-gradient(
+  131.25deg,
+  rgba(0, 0, 0, 0.85) 65.02%,
+  rgba(238, 238, 238, 0.85) 104.03%
+);
+$white: #fff;
+// Typography
+
+$hero-description: clamp(
+  1.4rem,
+  1.3591549295774648rem + 0.3755868544600938vw,
+  2rem
+);
+
+$section-title: clamp(
+  2.8rem,
+  2.2014084507042253rem + 1.5962441314553992vw,
+  4.5rem
+);
+$card-title: clamp(1.6rem, 1.4591549295774648rem + 0.3755868544600938vw, 2rem);
+$card-cta: clamp(1.6rem, 1.5295774647887326rem + 0.1877934272300469vw, 1.8rem);
+$process-title: clamp(2rem, 1.788732394366197rem + 0.563380281690141vw, 2.6rem);
+$conversion-title: clamp(
+  2.5rem,
+  1.795774647887324rem + 1.8779342723004695vw,
+  4.5rem
+);
+$faq-question: clamp(
+  1.6rem,
+  1.3183098591549298rem + 0.7511737089201876vw,
+  2.4rem
+);
+$review-title: clamp(
+  3.6rem,
+  2.6140845070422536rem + 2.6291079812206575vw,
+  6.4rem
+);

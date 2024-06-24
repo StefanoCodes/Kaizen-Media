@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./base";
+@import "./mixins";
+@import "./utlilities";
+@import "./components/hero";
+@import "./components/navigation";
+@import "./components/services";
+@import "./components/process";
+@import "./components/conversion";
+@import "./components/frequently-asked-questions";
+@import "./components/footer";
+@import "./components/review";
+@import "./components/form";
+:root {
+  --background-color-page1: #{$white};
+  --background-color-page2: #{$gradient-dark-to-light};
+}

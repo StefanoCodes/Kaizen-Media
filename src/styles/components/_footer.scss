@@ -1,0 +1,52 @@
+.footer {
+  font-family: "Satoshi", sans-serif;
+  background-color: #0a0b0d;
+  color: #fff;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+  gap: 3rem;
+  &__heading {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+  }
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 3rem;
+    @include for-tablet() {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    a {
+      color: #aaa;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__socials {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    a:hover {
+      color: #fff;
+    }
+  }
+  &__copy {
+    p {
+      color: #bbb;
+    }
+  }
+}

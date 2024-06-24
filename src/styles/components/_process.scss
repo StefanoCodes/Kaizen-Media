@@ -1,0 +1,78 @@
+.process {
+  &__container {
+    @include for-desktop() {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__content {
+    margin-top: 5rem;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    @include for-tablet() {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 6rem;
+      grid-row-gap: 4rem;
+      margin-bottom: 4rem;
+    }
+    @include for-desktop() {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    &-step {
+      list-style-type: disc;
+    }
+    &-step li {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    &-step-title {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: $process-title;
+    }
+  }
+  &__illustration {
+    display: none;
+    @include for-desktop() {
+      flex: 1;
+      display: initial;
+    }
+  }
+}
+
+.swiper {
+  height: 50rem;
+  width: 50rem;
+}
+.con {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bullet-point {
+  position: relative;
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  background-color: $primary-color-800;
+  border-radius: 50%;
+}
+.point {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  border-radius: 50%;
+}

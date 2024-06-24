@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+const navlinks = [
+  {
+    title: 'Home',
+    url: '#home',
+    index: '01',
+  },
+  {
+    title: 'Consultation',
+    url: 'https://calendly.com/stefanovidmarmarketingagency/free-website-consultation',
+    index: '02',
+  },
+  {
+    title: 'Services',
+    url: '#services',
+    index:'03',
+  },
+  
+  {
+    title: 'Contact',
+    url: '#contact',
+    index: '04',
+  },
+  {
+    title: 'Website Review',
+    url: '/review',
+    index: '05',
+  },
+]
+---
+<nav class="navigation">
+    <a href="#home" >
+     <Icon size={32} name="seo" />
+    </a>
+    <div class="navigation__wrapper">
+      <button class="navigation__menu" aria-expanded="false" aria-label="Open Mobile Navigation">
+          <span class="hamburger-menu-dash"></span>
+          <span class="hamburger-menu-dash"></span>
+          <span class="hamburger-menu-dash"></span>
+       </button>
+       <ul class="navigation__list">
+        {
+          navlinks.map((link) => {
+            return(
+            <li class="navigation__list-item">
+          <a href={link.url}>{link.title}</a>
+            </li>
+          )})
+        }
+      </ul>
+    </div>
+</nav>
+
+
+<script>
+const mobileNav = () => {
+  const navLinks = document.querySelectorAll(".navigation__list-item");
+  const navBtn = document.querySelector(".navigation__menu");
+  const navDrawer = document.querySelector(".navigation__list");
+  const toggleDrawer = () => {
+  navBtn.setAttribute('aria-expanded', navBtn.getAttribute('aria-expanded') === "false" ? 'true' : 'false')
+  navDrawer.classList.toggle("hidden");
+  navDrawer.classList.toggle("show");
+  navBtn.classList.toggle('menu-open');
+  document.body.classList.toggle("overflow-hidden")
+}
+
+navBtn.addEventListener("click", toggleDrawer);
+navLinks.forEach((link) => {
+  link.addEventListener("click", toggleDrawer);
+})
+}
+document.addEventListener('astro:page-load', mobileNav);
+</script>

@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+const cards = [
+  
+{
+  icon: 'web_design',
+  title : 'Web Design',
+  description: 'Stunning, responsive websites that captivate and convert. Let’s create your digital success story!',
+
+}, 
+{
+  icon: 'web_dev',
+  title : 'Web Development',
+  description: 'Custom-built websites using real code, not builders. Fast, reliable, and tailored to your needs!',
+},
+{
+  icon: 'seo',
+  title : 'Search Engine Optimization',
+  description: 'Boost your visibility with expert SEO. Drive organic traffic and grow your business!',
+}
+
+]
+---
+
+{cards.map((card) => {
+  return (
+
+  <div class="card">
+    <Icon size={36} name={card.icon}/>
+    <h3 class="card__title">{card.title}</h3>
+    <p class="card__description">{card.description}</p>
+    <a class="card__cta" href="#">Learn More</a>
+  </div>
+  )
+})}

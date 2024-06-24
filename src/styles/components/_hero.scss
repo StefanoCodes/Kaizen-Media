@@ -1,0 +1,73 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5.7rem;
+  text-align: center;
+  margin-top: 7rem;
+  @include for-tablet() {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+    align-items: center;
+  }
+  @include for-desktop() {
+    gap: 14rem;
+  }
+  @include for-desktop-lg() {
+    margin-top: 10rem;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    @include for-tablet() {
+      flex: 1;
+      align-self: baseline;
+    }
+
+    &-main {
+      font-weight: bold;
+      line-height: 1.2;
+      font-family: "Raleway", sans-serif;
+      font-size: 3rem;
+      @include for-tablet() {
+        font-size: 4rem;
+      }
+      @include for-desktop-lg() {
+        font-size: 6rem;
+      }
+    }
+    &-accent {
+      color: $primary-color-900;
+    }
+  }
+
+  &__call-to-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    @include for-tablet() {
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    @include for-desktop-lg() {
+      font-size: 2rem;
+    }
+  }
+  &__illustration {
+    max-width: 50rem;
+    @include for-tablet() {
+      flex: 0.75;
+    }
+    @include for-desktop() {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+---
+const {title, style, link } = Astro.props;
+---
+<a href={link} class=`btn-cta ${style === undefined ? "" : "btn-"}${style ?? ""}` aria-label={title}>
+  {title}
+</a>
