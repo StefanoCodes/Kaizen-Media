@@ -54,7 +54,8 @@ const navlinks = [
 
 
 <script>
-const mobileNav = () => {
+  if(window.innerWidth <= 768){
+    const mobileNav = () => {
   const navLinks = document.querySelectorAll(".navigation__list-item");
   const navBtn = document.querySelector(".navigation__menu");
   const navDrawer = document.querySelector(".navigation__list");
@@ -72,4 +73,6 @@ navLinks.forEach((link) => {
 })
 }
 document.addEventListener('astro:page-load', mobileNav);
+}
+
 </script>

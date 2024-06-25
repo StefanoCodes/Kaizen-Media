@@ -17,7 +17,11 @@
     cursor: pointer;
     z-index: 50;
   }
-
+  .menu-open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
   &__menu.menu-open .hamburger-menu-dash:nth-child(1) {
     background: white;
     transform: rotateZ(45deg);
