@@ -83,7 +83,9 @@
     align-items: center;
     gap: 3rem;
     &-title {
-      font-size: 4rem;
+      @include for-desktop() {
+        font-size: 4rem;
+      }
     }
   }
 }
