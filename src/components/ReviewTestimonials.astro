@@ -1,0 +1,17 @@
+---
+const imgs = [{
+  url: '/src/assets/review testimonials/testimonial_1.png'
+}]
+
+---
+
+<div class="review__testimonials">
+  <h2 class="review__testimonials-title">What people said about our website reviews 👇</h2>
+  <div class="review__testimonials-imgs">
+
+{imgs.map((img) => {
+  return  <img src=`${img.url}` alt="testimonial image of a satisfied client with our service">
+})}
+  </div>
+  
+</div>
