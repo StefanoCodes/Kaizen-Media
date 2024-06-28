@@ -3,12 +3,16 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top: 0;
+  top: 2rem;
   background-color: rgba(0, 0, 0, 0.85);
   border: 1px solid #232426;
   border-radius: 1.4rem;
   padding: 1.5rem 1rem;
   z-index: 1000;
+  @include for-desktop() {
+    position: initial;
+    top: 0;
+  }
   &__menu {
     display: flex;
     flex-direction: column;
