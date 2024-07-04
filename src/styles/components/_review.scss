@@ -23,6 +23,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
+      text-transform: capitalize;
     }
     &-label {
       border: 2px solid rgba(4, 255, 120, 0.8);

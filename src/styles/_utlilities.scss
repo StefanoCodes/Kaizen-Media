@@ -75,6 +75,10 @@ label {
   color: #000;
   background-color: #fff;
   @include for-desktop() {
+  }
+}
+.btn-outline {
+  @include for-tablet() {
     border: 1.5px solid $primary-color-900;
   }
 }
@@ -102,4 +106,7 @@ label {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+.accent {
+  color: $primary-color-900;
 }

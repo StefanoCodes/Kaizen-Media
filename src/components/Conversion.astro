@@ -1,9 +1,10 @@
 ---
 import CtaBtn from "./CtaBtn.astro"
+const {sectionTitle,sectionBtn, sectionBtnLink} = Astro.props;
 ---
 <section class="conversion">
   <h2 class="conversion__title">
-    Ready to Elevate Your Conversions? Let's Get Started!
+    {sectionTitle}
   </h2>
-  <CtaBtn target="_blank" link="https://calendly.com/stefanovidmarmarketingagency/free-website-consultation" args="center" title="Get Started Now" style="light"/>
+  <CtaBtn target="_blank" link={sectionBtnLink} args="center" title={sectionBtn} style="light"/>
 </section>
