@@ -63,8 +63,10 @@
     }
   }
   &__illustration {
+    display: none;
     max-width: 50rem;
     @include for-tablet() {
+      display: initial;
       flex: 0.75;
     }
     @include for-desktop() {
