@@ -1,11 +1,7 @@
 .faq {
   &__desktop {
     @include for-desktop-lg() {
-      background: linear-gradient(
-        107.15deg,
-        rgba(0, 0, 0, 0.9) 80.81%,
-        rgba(238, 238, 238, 0.9) 108.67%
-      );
+      background: rgba(0, 0, 0, 0.9) 80.81%;
       border-radius: 3rem;
       color: #fff;
       display: flex;

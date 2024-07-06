@@ -1,7 +1,20 @@
 ---
-import { Image } from 'astro:assets';
+import Section from '../components/Section.astro';
+import mockup_1 from "../assets/images/mockup-1.png";
+import mockup_2 from "../assets/images/mockup-2.png";
+import mockup_3 from "../assets/images/mockup-3.png";
+import mockup_4 from "../assets/images/mockup-4.png";
+import Cta from './CtaBtn.astro';
+const mockups = [mockup_1,mockup_3,mockup_2,mockup_4];
 ---
 
-<div>
-  <!-- <Image/> -->
-</div>
+<Section sectionID="projects" sectionTitle="Our Previous Work" subHeadline="Projects"> 
+  <div class="mockups">
+    {
+      mockups.map((mockup) => <img src={mockup.src} alt="a screenshot image of a previous project shown in a desktop screen"/>)
+    }
+  </div>
+
+<Cta title="Let's Make Yours" style="dark" link="https://calendly.com/stefanovidmarmarketingagency/free-website-consultation"/>
+
+ </Section> 
