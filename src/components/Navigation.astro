@@ -1,27 +1,28 @@
 ---
 import { Icon } from "astro-icon/components";
+import Cta from './CtaBtn.astro';
 const navlinks = [
-  {
-    title: 'Home',
-    url: '#home',
-    index: '01',
-  },
-  {
-    title: 'Consultation',
-    url: 'https://calendly.com/stefanovidmarmarketingagency/free-website-consultation',
-    index: '02',
-  },
   {
     title: 'Services',
     url: '#services',
+    index: '01',
+  },
+  {
+    title: 'Work',
+    url: '#projects',
+    index: '02',
+  },
+  {
+    title: 'Process',
+    url: '#process',
     index:'03',
   },
-  
   {
-    title: 'Projects',
-    url: '#projects',
-    index: '04',
+    title: 'FAQs',
+    url: '#faq',
+    index:'04',
   },
+  
   {
     title: 'Website Review',
     url: '/review',
@@ -52,7 +53,9 @@ const navlinks = [
           )})
         }
       </ul>
+   
     </div>
+    <Cta title="Get Started Now" style="dark cta_nav" link="https://calendly.com/stefanovidmarmarketingagency/free-website-consultation"/>
 </nav>
 
 

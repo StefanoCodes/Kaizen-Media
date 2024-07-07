@@ -28,9 +28,8 @@ const {backgroundColor = "--background-color-page1", textColor, title} = Astro.p
 	</head>
 	<body style=`background: var(${backgroundColor}); color:${textColor}`>
 		<main>
-			<Container>
-				<slot/>
-		</Container>
+			<slot/>
+			
 		</main>
 	</body>
 </html>

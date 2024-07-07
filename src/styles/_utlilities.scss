@@ -113,3 +113,9 @@ label {
 .accent {
   color: $primary-color-900;
 }
+.cta_nav {
+  display: none;
+  @include for-tablet() {
+    display: initial;
+  }
+}

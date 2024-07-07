@@ -1,5 +1,8 @@
 #services {
   margin-top: 2rem !important;
+  @include for-tablet() {
+    margin-top: 6rem !important;
+  }
 }
 .cards {
   margin-top: 5rem;

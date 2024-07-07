@@ -3,12 +3,13 @@
   flex-direction: column;
   gap: 5.7rem;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
   @include for-tablet() {
     flex-direction: row;
     text-align: left;
     gap: 3rem;
     align-items: center;
+    margin-top: 3rem;
   }
   @include for-desktop() {
     gap: 14rem;

@@ -1,8 +1,11 @@
 .projects {
   img {
     @include for-desktop() {
-      max-width: 50rem;
+      max-width: 77rem;
       margin: 0 auto;
+    }
+    @include for-desktop-lg() {
+      max-width: 50rem;
     }
   }
   display: flex;
