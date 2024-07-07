@@ -5,13 +5,18 @@ import mockup_2 from "../assets/images/mockup-2.png";
 import mockup_3 from "../assets/images/mockup-3.png";
 import mockup_4 from "../assets/images/mockup-4.png";
 import Cta from './CtaBtn.astro';
+import { Image } from 'astro:assets';
 const mockups = [mockup_1,mockup_3,mockup_2,mockup_4];
 ---
 
 <Section sectionID="projects" sectionTitle="Our Previous Work" subHeadline="Projects"> 
   <div class="mockups">
     {
-      mockups.map((mockup) => <img src={mockup.src} alt="a screenshot image of a previous project shown in a desktop screen"/>)
+       <Image src={mockup_1} alt="a screenshot image of a previous project shown in a desktop screen"/>
+       <Image src={mockup_2} alt="a screenshot image of a previous project shown in a desktop screen"/>
+       <Image src={mockup_3} alt="a screenshot image of a previous project shown in a desktop screen"/>
+       <Image src={mockup_4} alt="a screenshot image of a previous project shown in a desktop screen"/>
+       
     }
   </div>
 
